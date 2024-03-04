@@ -1,0 +1,94 @@
+name: NodeJS with Webpack
+
+on:
+Skip to content
+ETs-Alien-Organizations
+
+Overview
+Repositories
+
+We are having a problem billing your account. Please enter a new payment method or check with your payment provider for details on why the transaction failed. You can downgrade to GitHub Free in your Billing settings.
+You can always contact support with any questions.
+@MasterOwnerETcorps
+MasterOwnerETcorps
+MasterOwnerETcorps
+Owner
+
+Membership
+
+    Two-factor security enabled
+
+Owner
+
+As an owner, MasterOwnerETcorps has admin access to all repositories that belong to the ETs-Alien-Organizations organization. Manage your owners on the People page.
+MasterOwnerETcorps has access to 16 repositories
+ETs-Alien-Organizations / SQL.Bankbridge Private
+Admin on this repository
+ETs-Alien-Organizations / demo-repository Private
+Admin on this repository
+ETs-Alien-Organizations / congenial-couscous-demo-repository Private
+Admin on this repository
+ETs-Alien-Organizations / .github-Readme.md Private
+Admin on this repository
+ETs-Alien-Organizations / https-github.com-new Private
+Admin on this repository
+ETs-Alien-Organizations / microsoft-etcorps.github.gov-Owner.automated.html Private
+Admin on this repository
+ETs-Alien-Organizations / chaisfitzwater-gmail.com Internal
+Admin on this repository
+ETs-Alien-Organizations / https-github.com-orgs-ETs-Alien-Organizations-teams-dev-ops-SQL.Bankbridge Private
+Admin on this repository
+ETs-Alien-Organizations / .admin Public
+Admin on this repository
+ETs-Alien-Organizations / BMO-Financial-Corporation-chaisfitzwater-etcorps33.onmicrosoft.com Public
+Admin on this repository
+ETs-Alien-Organizations / .Microsoft-email.account Public
+Admin on this repository
+ETs-Alien-Organizations / Sec.gov-Bitcoin-Segistration Public
+Admin on this repository
+ETs-Alien-Organizations / autocomplete Public
+Admin on this repository
+ETs-Alien-Organizations / Jsmhtml.Microsoft.getCopilot-inshellisense Public
+Admin on this repository
+ETs-Alien-Organizations / Html.md Public
+Admin on this repository
+ETs-Alien-Organizations / .github Public
+Admin on this repository
+Footer
+© 2024 GitHub, Inc.
+Footer navigation
+
+    Terms
+    Privacy
+    Security
+    Status
+    Docs
+    Contact
+
+MasterOwnerETcorps 
+access for ETs-Alien-Organizations
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        node-version: [14.x, 16.x, 18.x]
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Use Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v3
+      with:
+        node-version: ${{ matrix.node-version }}
+
+    - name: Build
+      run: |
+        npm install
+        npx webpack
